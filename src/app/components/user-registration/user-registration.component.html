@@ -6,73 +6,55 @@
 <form [formGroup]="form" class="d-flex flex-column">
 
     <mat-form-field>
-        <mat-label>
-            First Name
-        </mat-label>
+        <mat-label>First Name</mat-label>
         <input 
             matInput
             type="text"
             formControlName="givenName" />
 
             @if(form.get('givenName').invalid && form.get('givenName').touched) {
-                <mat-error>
-                    First Name is required
-                </mat-error>
+                <mat-error>First Name is required</mat-error>
             }
     </mat-form-field>
 
     <mat-form-field>
-        <mat-label>
-            Last Name
-        </mat-label>
+        <mat-label>Last Name</mat-label>
         <input 
             matInput
             type="text"
             formControlName="surName" />
 
             @if(form.get('surName').invalid && form.get('surName').touched) {
-                <mat-error>
-                    Last Name is required
-                </mat-error>
+                <mat-error>Last Name is required</mat-error>
             }
     </mat-form-field>
 
     <mat-form-field>
-        <mat-label>
-            Email
-        </mat-label>
+        <mat-label>Email</mat-label>
         <input 
             matInput
             type="text"
             formControlName="email" />
 
             @if(form.get('email').invalid && form.get('email').touched) {
-                <mat-error>
-                    Email is missing or invalid
-                </mat-error>
+                <mat-error>Email is missing or invalid</mat-error>
             }
     </mat-form-field>
 
     <mat-form-field>
-        <mat-label>
-            Password
-        </mat-label>
+        <mat-label>Password</mat-label>
         <input 
             matInput
             type="password"
             formControlName="password" />
 
             @if(form.get('password').invalid && form.get('password').touched) {
-                <mat-error>
-                    Password is missing or invalid
-                </mat-error>
+                <mat-error>Password is missing or invalid</mat-error>
             }
     </mat-form-field>
 
     <mat-form-field>
-        <mat-label>
-            Confirm Password
-        </mat-label>
+        <mat-label>Confirm Password</mat-label>
         <input 
             matInput
             type="password"

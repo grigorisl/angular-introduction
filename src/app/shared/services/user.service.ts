@@ -9,10 +9,9 @@ const API_URL = `${environment.apiURL}/user`
   providedIn: 'root'
 })
 export class UserService {
-
   http: HttpClient = inject(HttpClient);
 
   registerUser(user: User) {
-    return this.http.post<{msg: string }>(`${API_URL}/register`, user)
+    return this.http.post<{ msg: string }>(`${API_URL}/register`, user)
   }
 }

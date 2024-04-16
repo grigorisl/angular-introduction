@@ -64,4 +64,20 @@ export class UserRegistrationComponent {
     };
   }
 
+  check_duplicate_email() {
+    const email = this.form.get('email').value;
+
+    this.userService.check_duplicate_email(email).subscribe({
+      next: (response) => {
+        console.log(response.msg)
+        this.form.get('email').setErrors(null);
+      },
+      error: (response) => {
+        const message = response.error.msg;
+        console.log(message);
+        this.form.get('email').setErrors({ duplicateEmail: true })
+      }
+    })
+  }
+
 }
